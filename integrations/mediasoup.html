@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peer Metrics</title>
-    <meta
-      name="description"
-      content="A self-hosted, open source WebRTC analytics platform for monitoring and optimizing real-time communication apps."
-    />
+    <title>Mediasoup integration | Peer Metrics</title>
+    <meta name="description" content="Give PeerMetrics your mediasoup device details so it can attribute transport behavior and connection state correctly across your sessions." />
     <meta name="google" content="notranslate" />
     <meta property="og:site_name" content="peermetrics.io" />
     <meta property="og:type" content="website" />
@@ -29,19 +26,9 @@
     <link href="/static/css/overrides.css" rel="stylesheet" type="text/css" media="all" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/wretch@1.7.1/dist/bundle/wretch.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8G5EJHB7R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-S8G5EJHB7R');
-    </script>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
   </head>
   <body>
-    <header class="navbar-container">
+<header class="navbar-container">
       <div class="bg-dark navbar-dark" data-sticky="top">
         <div class="container">
           <nav class="navbar navbar-expand-lg">
@@ -79,51 +66,65 @@
       </div>
     </header>
 
-    <main class="main-container">
-      <section class="space-lg bg-white hero-section">
+    
+    <main class="main-container integration-page">
+      <section class="bg-white integration-page-hero">
         <div class="container">
           <div class="row align-items-center justify-content-around">
             <div class="col-12 col-md-6 col-lg-5 text-center text-md-left section-intro hero-copy">
-              <h1 class="display-3">Flawless calls with just one line of code</h1>
-              <span class="lead">
-                Gain insights for your team &amp; craft the best experience for your users
-              </span>
-              <div class="mt-3 d-flex flex-column flex-sm-row flex-md-column align-items-center align-items-md-start">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/peermetrics/peermetrics" class="btn btn-success btn-lg mb-2 mb-sm-0 mr-sm-2 mr-md-0">
-                  Get started - It's Free and Open Source!
-                </a>
-                <a href="#contact" class="btn btn-outline-primary btn-lg mt-md-2">
-                  Need a custom integration or managed service?
-                </a>
-              </div>
+              <span class="title-decorative">Mediasoup + PeerMetrics</span>
+              <h1 class="display-4">Mediasoup integration</h1>
+              <span class="lead">Give PeerMetrics your mediasoup device details so it can attribute transport behavior and connection state correctly across your sessions.</span>
+              <p class="mt-3 mb-0 integration-intro-copy">PeerMetrics fits into the setup layer rather than replacing your flow. Register your mediasoup device metadata, then keep using your usual transports and producers.</p>
             </div>
-            <div class="col-12 col-md-6 col-lg-6 hero-image-wrap">
-              <img alt="Peer Metrics homepage hero" class="img-fluid w-100" src="/static/img/homepage/main.jpg" />
+            <div class="col-12 col-md-6 col-lg-5">
+              <div class="integration-hero-panel">
+                <img class="integration-platform-logo" src="/static/img/homepage/sdk/mediasoup.png" alt="Mediasoup logo" />
+                <div class="integration-hero-chip">PeerMetrics SDK</div>
+                <h3>Quick setup</h3>
+                <ul class="integration-hero-list">
+                  <li>Initialize PeerMetrics for the user and conference.</li>
+                  <li>Register the Mediasoup SDK integration.</li>
+                  <li>Keep your normal call setup flow.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="integrations" class="space-lg bg-white">
+      <section class="bg-white pt-0">
         <div class="container">
-          <div class="row justify-content-center text-center section-intro">
-            <div class="col">
-              <h2 class="display-5">Integrate with your favorite WebRTC SDK</h2>
-              <div class="row integrations mt-5 justify-content-center text-center">
-                <div class="col-6 col-md-3 col-lg"><img class="livekit-logo" src="/static/img/homepage/sdk/livekit-replacement.png" alt="LiveKit" /></div>
-                <div class="col-6 col-md-3 col-lg"><img src="/static/img/homepage/sdk/mediasoup.png" alt="Mediasoup" /></div>
-                <div class="col-6 col-md-3 col-lg"><img src="/static/img/homepage/sdk/janus.png" alt="Janus" /></div>
-                <div class="col-6 col-md-3 col-lg"><img src="/static/img/homepage/sdk/vonage.png" alt="Vonage" /></div>
-                <div class="col-6 col-md-3 col-lg"><img src="/static/img/homepage/sdk/agora.webp" alt="Agora" /></div>
-                <div class="col-6 col-md-3 col-lg"><img src="/static/img/homepage/sdk/pion.png" alt="Pion" /></div>
-                <div class="col-6 col-md-3 col-lg"><img src="/static/img/homepage/sdk/jitsi.png" alt="Jitsi" /></div>
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+              <div class="card pricing card-lg integration-page-card">
+                <div class="card-body">
+                  <h3 class="display-5 mb-3">How it works</h3>
+                  <ol class="integration-steps"><li>Initialize PeerMetrics for the current user and conference.</li><li>Create or reuse your mediasoup Device instance.</li><li>Pass the device metadata into addSdkIntegration().</li><li>Continue with your normal transport and producer flow afterward.</li></ol>
+                  <div class="integration-code-wrap mt-4">
+                    <div class="integration-code-header">Example</div>
+                    <pre class="integration-code"><code>const peerMetrics = new PeerMetrics({
+  apiKey: 'YOUR_API_KEY',
+  userId: user.id,
+  conferenceId: roomId
+})
+
+peerMetrics.addSdkIntegration({
+  mediasoup: {
+    flag: device.flag,
+    name: device.name,
+    version: device.version,
+    handlerName: device.handlerName || device._handlerName
+  }
+})</code></pre>
+                  </div>
+                  <p class="integration-footnote mb-0 mt-4">Based on the <a href="https://github.com/peermetrics/sdk-js/blob/master/README.md" target="_blank" rel="noopener noreferrer">PeerMetrics SDK integration docs</a>.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="how-it-works" class="bg-white">
+<section id="how-it-works" class="bg-white">
         <div class="container">
           <div class="row justify-content-center text-center section-intro">
             <div class="col-12 col-md-9 col-lg-8">
@@ -173,93 +174,8 @@
           </ul>
         </div>
       </section>
-
-      <section id="about" class="bg-white">
-        <div class="container">
-          <div class="row justify-content-center text-center section-intro">
-            <div class="col-12 col-md-11">
-              <span class="title-decorative">Peermetric’s Mission</span>
-              <h2 class="display-5">Peermetrics is an open source, self-hosted WebRTC analytics platform designed to help developers monitor, analyze, and optimize their real-time communication applications.</h2>
-              <span class="lead">
-                It has the perfect mix of features so your users will never ask: &quot;Hey, can you hear me?&quot;
-              </span>
-            </div>
-          </div>
-        </div>
-        <article class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-10 text-center">
-              <img alt="About Peer Metrics" src="/static/img/about/header.jpg" class="figure-image img-fluid rounded" />
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="managed-services">
-        <div class="container">
-          <div class="row justify-content-center text-center section-intro">
-            <div class="col-12 col-md-10">
-              <span class="title-decorative">Managed Services</span>
-              <h2 class="display-4 mb-3">Peermetrics Managed Service and Custom Integrations</h2>
-              <span class="lead">
-                For scale, large workloads, production environments, or organizations preferring to focus on their core application rather than infrastructure management, <a href="https://webrtc.ventures" target="_blank" rel="noopener noreferrer">WebRTC.ventures</a> offers managed services for your self-hosted Peermetrics deployment.
-              </span>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-              <h3 class="display-5">We Offer:</h3>
-              <ul class="list-unstyled text-left">
-                <li class="mb-3 lead"><strong>Expert Implementation:</strong> Professional setup and configuration by the team that maintains the PeerMetrics codebase, ensuring optimal performance and security.</li>
-                <li class="mb-3 lead"><strong>Managed Infrastructure:</strong> Complete maintenance services, including monitoring, updates, and scaling management of your self-hosted deployment.</li>
-                <li class="mb-3 lead"><strong>Enterprise Support:</strong> Dedicated support channels with guaranteed response times and direct access to WebRTC specialists.</li>
-                <li class="mb-4 lead"><strong>Custom Development:</strong> Direct access to the development team for specialized features, integrations with proprietary systems, and enhanced analytics capabilities.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="container">
-          <div class="row justify-content-center text-center section-intro">
-            <div class="col-12 col-md-10">
-              <span class="title-decorative">Need Help?</span>
-              <h2 class="display-5">Questions about the platform or looking for custom implementations or managed service?</h2>
-              <span class="lead">Reach out to the WebRTC.ventures team.</span>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-              <div class="card pricing card-lg">
-                <div class="card-body">
-                  <h5 class="text-center">How Can We Help?</h5>
-                  <div id="hubspot-form"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <div class="col-12 col-lg-8">
-              <div class="card pricing card-lg">
-                <div class="card-body">
-                  <h3>Self-host</h3>
-                  <h6>peer metrics is fully open source.</h6>
-                  <p>
-                    You can start hosting your own instance in 2 simple steps. Check GitHub for setup and deployment details.
-                  </p>
-                  <a href="https://github.com/peermetrics/peermetrics" class="btn btn-lg btn-success" target="_blank" rel="noopener noreferrer">
-                    See the documentation
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
-
-    <footer class="footer-short">
+<footer class="footer-short">
       <div class="container">
         <nav class="row justify-content-between align-items-center">
           <div class="col-auto">
@@ -284,17 +200,6 @@
       </div>
     </footer>
 
-    <script>
-      window.addEventListener('load', function () {
-        if (window.hbspt && window.hbspt.forms) {
-          window.hbspt.forms.create({
-            portalId: '45353883',
-            formId: 'd13525b7-7d18-45e7-81f3-b75d03e31acb',
-            region: 'na1',
-            target: '#hubspot-form'
-          });
-        }
-      });
-    </script>
+    
   </body>
 </html>

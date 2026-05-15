@@ -163,13 +163,132 @@ section {
   max-width: 160px;
 }
 
-.integrations .soon {
-  display: flex;
-  flex-direction: column;
+.navbar-dark .dropdown-menu {
+  margin-top: 0.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+  min-width: 13rem;
 }
 
-.integrations .soon img {
-  filter: grayscale(100%);
+.navbar-dark .dropdown-item {
+  color: #212529;
+  font-weight: 400;
+}
+
+.navbar-dark .dropdown-item:hover,
+.navbar-dark .dropdown-item:focus {
+  background: rgba(40, 167, 69, 0.08);
+  color: #212529;
+}
+
+.integration-page {
+  background: #f8f9fa;
+}
+
+.integration-page-hero {
+  padding-bottom: 2rem;
+}
+
+.integration-page-summary {
+  max-width: 48rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.integration-intro-copy {
+  max-width: 36rem;
+  line-height: 1.8;
+  color: #495057;
+}
+
+.integration-hero-panel {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  color: #212529;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+}
+
+.integration-hero-panel h3 {
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.integration-platform-logo {
+  display: block;
+  max-height: 52px;
+  max-width: 180px;
+  width: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.integration-hero-chip {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(40, 167, 69, 0.1);
+  color: #218838;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.integration-hero-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.integration-hero-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+}
+
+.integration-page-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.integration-steps {
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.integration-steps li {
+  margin-bottom: 0.65rem;
+  line-height: 1.7;
+}
+
+.integration-code-wrap {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #0f172a;
+}
+
+.integration-code-header {
+  padding: 0.75rem 1rem;
+  background: #111827;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.integration-code {
+  margin: 0;
+  padding: 1rem;
+  color: #e2e8f0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.integration-footnote {
+  margin-top: 1rem;
+  color: #6c757d;
 }
 
 .feature-list li {
@@ -239,6 +358,11 @@ section {
   .hero-image-wrap {
     margin-top: 1rem;
   }
+}
+
+footer.footer-short {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 #hubspot-form iframe {
